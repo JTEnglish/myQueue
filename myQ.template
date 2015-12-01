@@ -4,7 +4,7 @@
 // 		.template file for template queue
 //		class using stl stacks
 // Author: Jacob English
-// (c) 2015
+// Copyright (c) 2015 Jacob English
 ///////////////////////////////////////////
 
 #include <iostream>

@@ -3,7 +3,7 @@
 // Description:
 // 	main.cc to test myQ template class
 // Author: Jacob English
-// (c) 2015
+// Copyright (c) 2015 Jacob English
 ///////////////////////////////////////////
 #include <iostream>
 #include <string>
