@@ -1,0 +1,55 @@
+///////////////////////////////////////////
+// File: myQ.template
+// Description:
+// 		.template file for template queue
+//		class using stl stacks
+// Author: Jacob English
+// (c) 2015
+///////////////////////////////////////////
+
+#include <iostream>
+using namespace std;
+
+template<class T>
+myQ<T>::myQ(const myQ& q)
+{
+	front = q.front;
+	back = q.back;	
+}
+
+template<class T>
+void myQ<T>::operator =(const myQ<T> q)
+{
+	front = q.front;
+	back = q.back;
+}
+
+template<class T>
+void myQ<T>::enqueue(T item)
+{
+	front.push(item);	
+}
+
+template<class T>
+T myQ<T>::dequeue()
+{
+	if (back.size() == 0)
+	{
+		int f_size = front.size();
+		for(int i = 0; i < f_size; i++)
+		{
+			back.push(front.top());
+			front.pop();
+		}
+	}
+
+	T tmp = back.top();
+	back.pop();
+	return (tmp);
+}
+
+template<class T>
+int myQ<T>::size()
+{
+	return (front.size() + back.size());
+}
